@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    h1= title
+    p Bem vindo ao nosso teste
+
+    // Wrapper
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 Usuário
+            p
+                strong Nome:
+                |  <span id='userInfoName'></span>
+                br
+                strong Idade:
+                |  <span id='userInfoAge'></span>
+                br
+                strong Sexo:
+                |  <span id='userInfoGender'></span>
+                br
+                strong Local:
+                |  <span id='userInfoLocation'></span>
+        // /USER INFO
+
+        // USER LIST
+        h2 Lista de usuários
+        #userList
+            table
+                thead
+                    th Usuário
+                    th Email
+                    th Deletar?
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Add User
+        #addUser
+            fieldset
+                input#inputUserName(type='text', placeholder='Usuario')
+                input#inputUserEmail(type='text', placeholder='Email')
+                br
+                input#inputUserFullname(type='text', placeholder='Nome Completo')
+                input#inputUserAge(type='text', placeholder='Idade')
+                br
+                input#inputUserLocation(type='text', placeholder='Local')
+                input#inputUserGender(type='text', placeholder='Sexo')
+                br
+                button#btnAddUser Adicionar
+        // /ADD USER
+
+    // /WRAPPER
